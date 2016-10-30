@@ -74,7 +74,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        $user->removeAllRole();
+        $user->removeAllRoles();
         $role_ids = $request->role;
         foreach ($role_ids as $role_id) {
             $user->assignRole(Role::findOrFail($role_id));
